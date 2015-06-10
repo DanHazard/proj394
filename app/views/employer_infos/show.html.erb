@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @employer_info.client_id %>
+</p>
+
+<p>
+  <strong>Companyname:</strong>
+  <%= @employer_info.companyName %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @employer_info.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @employer_info.state %>
+</p>
+
+<%= link_to 'Edit', edit_employer_info_path(@employer_info) %> |
+<%= link_to 'Back', employer_infos_path %>

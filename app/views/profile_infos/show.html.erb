@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @profile_info.client_id %>
+</p>
+
+<p>
+  <strong>Fname:</strong>
+  <%= @profile_info.fname %>
+</p>
+
+<p>
+  <strong>Lname:</strong>
+  <%= @profile_info.lname %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @profile_info.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @profile_info.state %>
+</p>
+
+<%= link_to 'Edit', edit_profile_info_path(@profile_info) %> |
+<%= link_to 'Back', profile_infos_path %>

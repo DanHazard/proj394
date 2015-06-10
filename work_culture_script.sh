@@ -1,1 +1,1 @@
-rails g scaffold skillset client_id:integer project_management:integer scripting:integer programming:integer dbadmin:integer ui_ux:integer algorithms:integer system_design:integer analysis:integer web_dev:integer mobile_dev:integer sysarchitecture:integer ai:integer game_programming
+rails g scaffold employer_info client_id:integer companyName:string city:string state:string

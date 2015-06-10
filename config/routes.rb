@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :employer_infos
+  resources :profile_infos
   get 'user_pages/profile'
 
   get 'user_pages/browse_jobs'
