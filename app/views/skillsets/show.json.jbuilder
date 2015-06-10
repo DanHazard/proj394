@@ -1,0 +1,1 @@
+json.extract! @skillset, :id, :client_id, :project_management, :scripting, :programming, :dbadmin, :ui_ux, :algorithms, :system_design, :analysis, :web_dev, :mobile_dev, :sysarchitecture, :ai, :game_programming, :created_at, :updated_at

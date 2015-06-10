@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150607043736) do
+ActiveRecord::Schema.define(version: 20150610050704) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,25 @@ ActiveRecord::Schema.define(version: 20150607043736) do
     t.integer  "number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "skillsets", force: :cascade do |t|
+    t.integer  "client_id"
+    t.integer  "project_management"
+    t.integer  "scripting"
+    t.integer  "programming"
+    t.integer  "dbadmin"
+    t.integer  "ui_ux"
+    t.integer  "algorithms"
+    t.integer  "system_design"
+    t.integer  "analysis"
+    t.integer  "web_dev"
+    t.integer  "mobile_dev"
+    t.integer  "sysarchitecture"
+    t.integer  "ai"
+    t.string   "game_programming"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -35,5 +54,26 @@ ActiveRecord::Schema.define(version: 20150607043736) do
 
   add_index "users", ["email"], name: "index_users_on_email", using: :btree
   add_index "users", ["remember_token"], name: "index_users_on_remember_token", using: :btree
+
+  create_table "work_cultures", force: :cascade do |t|
+    t.integer  "client_id"
+    t.integer  "creative"
+    t.integer  "logical"
+    t.integer  "problem_solver"
+    t.integer  "listener"
+    t.integer  "oral_communicator"
+    t.integer  "written_communicator"
+    t.integer  "people_skills"
+    t.integer  "punctual"
+    t.integer  "accurate"
+    t.integer  "efficient"
+    t.integer  "multitasker"
+    t.integer  "planner"
+    t.integer  "researcher"
+    t.integer  "leader"
+    t.integer  "team_member"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
 
 end

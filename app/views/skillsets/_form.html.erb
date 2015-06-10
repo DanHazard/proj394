@@ -1,0 +1,73 @@
+<%= form_for(@skillset) do |f| %>
+  <% if @skillset.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@skillset.errors.count, "error") %> prohibited this skillset from being saved:</h2>
+
+      <ul>
+      <% @skillset.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :client_id %><br>
+    <%= f.select :client_id, [current_user.id] %>
+  </div>
+  <div class="field">
+    <%= f.label :project_management %><br>
+    <%= f.number_field :project_management %>
+  </div>
+  <div class="field">
+    <%= f.label :scripting %><br>
+    <%= f.number_field :scripting %>
+  </div>
+  <div class="field">
+    <%= f.label :programming %><br>
+    <%= f.number_field :programming %>
+  </div>
+  <div class="field">
+    <%= f.label :dbadmin %><br>
+    <%= f.number_field :dbadmin %>
+  </div>
+  <div class="field">
+    <%= f.label :ui_ux %><br>
+    <%= f.number_field :ui_ux %>
+  </div>
+  <div class="field">
+    <%= f.label :algorithms %><br>
+    <%= f.number_field :algorithms %>
+  </div>
+  <div class="field">
+    <%= f.label :system_design %><br>
+    <%= f.number_field :system_design %>
+  </div>
+  <div class="field">
+    <%= f.label :analysis %><br>
+    <%= f.number_field :analysis %>
+  </div>
+  <div class="field">
+    <%= f.label :web_dev %><br>
+    <%= f.number_field :web_dev %>
+  </div>
+  <div class="field">
+    <%= f.label :mobile_dev %><br>
+    <%= f.number_field :mobile_dev %>
+  </div>
+  <div class="field">
+    <%= f.label :sysarchitecture %><br>
+    <%= f.number_field :sysarchitecture %>
+  </div>
+  <div class="field">
+    <%= f.label :ai %><br>
+    <%= f.number_field :ai %>
+  </div>
+  <div class="field">
+    <%= f.label :game_programming %><br>
+    <%= f.text_field :game_programming %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

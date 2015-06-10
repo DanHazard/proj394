@@ -1,0 +1,81 @@
+<%= form_for(@work_culture) do |f| %>
+  <% if @work_culture.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@work_culture.errors.count, "error") %> prohibited this work_culture from being saved:</h2>
+
+      <ul>
+      <% @work_culture.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :client_id %><br>
+    <%= f.select :client_id, [current_user.id] %>
+  </div>
+  <div class="field">
+    <%= f.label :creative %><br>
+    <%= f.number_field :creative %>
+  </div>
+  <div class="field">
+    <%= f.label :logical %><br>
+    <%= f.number_field :logical %>
+  </div>
+  <div class="field">
+    <%= f.label :problem_solver %><br>
+    <%= f.number_field :problem_solver %>
+  </div>
+  <div class="field">
+    <%= f.label :listener %><br>
+    <%= f.number_field :listener %>
+  </div>
+  <div class="field">
+    <%= f.label :oral_communicator %><br>
+    <%= f.number_field :oral_communicator %>
+  </div>
+  <div class="field">
+    <%= f.label :written_communicator %><br>
+    <%= f.number_field :written_communicator %>
+  </div>
+  <div class="field">
+    <%= f.label :people_skills %><br>
+    <%= f.number_field :people_skills %>
+  </div>
+  <div class="field">
+    <%= f.label :punctual %><br>
+    <%= f.number_field :punctual %>
+  </div>
+  <div class="field">
+    <%= f.label :accurate %><br>
+    <%= f.number_field :accurate %>
+  </div>
+  <div class="field">
+    <%= f.label :efficient %><br>
+    <%= f.number_field :efficient %>
+  </div>
+  <div class="field">
+    <%= f.label :multitasker %><br>
+    <%= f.number_field :multitasker %>
+  </div>
+  <div class="field">
+    <%= f.label :planner %><br>
+    <%= f.number_field :planner %>
+  </div>
+  <div class="field">
+    <%= f.label :researcher %><br>
+    <%= f.number_field :researcher %>
+  </div>
+  <div class="field">
+    <%= f.label :leader %><br>
+    <%= f.number_field :leader %>
+  </div>
+  <div class="field">
+    <%= f.label :team_member %><br>
+    <%= f.number_field :team_member %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

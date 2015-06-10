@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'user_pages/profile'
+
+  get 'user_pages/browse_jobs'
+
+  get 'user_pages/employers'
+
+  resources :skillsets
+  resources :work_cultures
+  resources :work_cultures
+  resources :work_cultures
   resources :profiles
   get 'admin/adminpage1'
 
@@ -18,6 +28,12 @@ Rails.application.routes.draw do
   root 'welcome#dhome'
 
   get 'home' => 'welcome#dhome'
+
+  get 'profile' => 'user_pages#profile'
+
+  get 'browse_jobs' => 'user_pages#browse_jobs'
+
+  get 'employers' => 'user_pages#employers'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

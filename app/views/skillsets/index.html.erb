@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Skillsets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Client</th>
+      <th>Project management</th>
+      <th>Scripting</th>
+      <th>Programming</th>
+      <th>Dbadmin</th>
+      <th>Ui ux</th>
+      <th>Algorithms</th>
+      <th>System design</th>
+      <th>Analysis</th>
+      <th>Web dev</th>
+      <th>Mobile dev</th>
+      <th>Sysarchitecture</th>
+      <th>Ai</th>
+      <th>Game programming</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @skillsets.each do |skillset| %>
+      <tr>
+        <td><%= skillset.client_id %></td>
+        <td><%= skillset.project_management %></td>
+        <td><%= skillset.scripting %></td>
+        <td><%= skillset.programming %></td>
+        <td><%= skillset.dbadmin %></td>
+        <td><%= skillset.ui_ux %></td>
+        <td><%= skillset.algorithms %></td>
+        <td><%= skillset.system_design %></td>
+        <td><%= skillset.analysis %></td>
+        <td><%= skillset.web_dev %></td>
+        <td><%= skillset.mobile_dev %></td>
+        <td><%= skillset.sysarchitecture %></td>
+        <td><%= skillset.ai %></td>
+        <td><%= skillset.game_programming %></td>
+        <td><%= link_to 'Show', skillset %></td>
+        <td><%= link_to 'Edit', edit_skillset_path(skillset) %></td>
+        <td><%= link_to 'Destroy', skillset, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Skillset', new_skillset_path %>

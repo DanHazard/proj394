@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Work Cultures</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Client</th>
+      <th>Creative</th>
+      <th>Logical</th>
+      <th>Problem solver</th>
+      <th>Listener</th>
+      <th>Oral communicator</th>
+      <th>Written communicator</th>
+      <th>People skills</th>
+      <th>Punctual</th>
+      <th>Accurate</th>
+      <th>Efficient</th>
+      <th>Multitasker</th>
+      <th>Planner</th>
+      <th>Researcher</th>
+      <th>Leader</th>
+      <th>Team member</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @work_cultures.each do |work_culture| %>
+      <tr>
+        <td><%= work_culture.client_id %></td>
+        <td><%= work_culture.creative %></td>
+        <td><%= work_culture.logical %></td>
+        <td><%= work_culture.problem_solver %></td>
+        <td><%= work_culture.listener %></td>
+        <td><%= work_culture.oral_communicator %></td>
+        <td><%= work_culture.written_communicator %></td>
+        <td><%= work_culture.people_skills %></td>
+        <td><%= work_culture.punctual %></td>
+        <td><%= work_culture.accurate %></td>
+        <td><%= work_culture.efficient %></td>
+        <td><%= work_culture.multitasker %></td>
+        <td><%= work_culture.planner %></td>
+        <td><%= work_culture.researcher %></td>
+        <td><%= work_culture.leader %></td>
+        <td><%= work_culture.team_member %></td>
+        <td><%= link_to 'Show', work_culture %></td>
+        <td><%= link_to 'Edit', edit_work_culture_path(work_culture) %></td>
+        <td><%= link_to 'Destroy', work_culture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Work culture', new_work_culture_path %>

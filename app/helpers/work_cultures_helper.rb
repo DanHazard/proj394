@@ -1,0 +1,2 @@
+module WorkCulturesHelper
+end
