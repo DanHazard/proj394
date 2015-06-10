@@ -2,7 +2,7 @@ class UserPagesController < ApplicationController
 
   def profile
     @skillset = Skillset.where(client_id: current_user.id).first
-    @profileInfo = ProfileInfo.where(client_id: current_user.id)
+    @profileInfo = ProfileInfo.where(client_id: current_user.id).first
     @workset = WorkCulture.where(client_id: current_user.id).first
     # @skills = Skillset.find(client_id: current_user.id)
   end
