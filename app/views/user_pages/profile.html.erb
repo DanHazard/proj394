@@ -67,4 +67,21 @@
   </script>
 </div>
 
-<%= @skillset.first.ai %>
+<%=
+  @skillarray = [@skillset.project_management, @skillset.scripting, @skillset.programming, @skillset.dbadmin, @skillset.ui_ux, @skillset.algorithms, @skillset.system_design, @skillset.web_dev, @skillset.mobile_dev, @skillset.sysarchitecture, @skillset.ai, @skillset.game_programming]
+  @skillarray
+%>
+
+<!-- t.integer  "project_management"
+t.integer  "scripting"
+t.integer  "programming"
+t.integer  "dbadmin"
+t.integer  "ui_ux"
+t.integer  "algorithms"
+t.integer  "system_design"
+t.integer  "analysis"
+t.integer  "web_dev"
+t.integer  "mobile_dev"
+t.integer  "sysarchitecture"
+t.integer  "ai"
+t.string   "game_programming" -->
