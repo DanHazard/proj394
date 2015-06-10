@@ -1,3 +1,5 @@
+<% if current_user.id == 4 || current_user.id == 5 || current_user.id == 6 %>
+
 <h6>Company</h6>
 <h4><%= @employerInfo.first.companyName %></h4>
 <h6>City</h6>
@@ -64,3 +66,10 @@
     });
   </script>
 </div>
+
+<% else %>
+
+<h4>You must be an employer to see this page</h4>
+<a href="/profile"><button class="btn btn-default">Back to Profile</button></a>
+
+<% end %>

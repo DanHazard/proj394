@@ -1,87 +1,84 @@
-<h6>First Name</h6>
-<h4><%= @profileInfo.first.fname %></h4>
-<h6>Last Name</h6>
-<h4><%= @profileInfo.first.lname %></h4>
-<h6>City</h6>
-<h4><%= @profileInfo.first.city %></h4>
-<h6>State</h6>
-<h4><%= @profileInfo.first.state %></h4>
+<% if @profileInfo == nil %>
+  <a href="/profile_infos/new"><button class="btn btn-default">Create Profile</button></a>
+<% else %>
 
-<br>
+  <h6>First Name</h6>
+  <h4><%= @profileInfo.first.fname %></h4>
+  <h6>Last Name</h6>
+  <h4><%= @profileInfo.first.lname %></h4>
+  <h6>City</h6>
+  <h4><%= @profileInfo.first.city %></h4>
+  <h6>State</h6>
+  <h4><%= @profileInfo.first.state %></h4>
 
-<div class = "col-md-6 col-lg-6 col-xs-12">
-  <h4>Sort your skills</h4>
-  <!-- THIS IS THE SKILLS SORT ORDER LIST HTML -->
-  <div id = "SkillsSortOrderList">
-    <div id="simpleSkillList" class="list-group">
-      <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Project Management/Tech Writing</div>
-      <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Programming Scripts</div>
-      <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Object Oriented Programming</div>
-      <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Database</div>
-      <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Algorithms</div>
-      <div class="list-group-item my-handle"><span class = "my-handle">:: </span>System Design/OS</div>
-      <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Business Analysis</div>
-      <div class="list-group-item my-handle"><span class = "my-handle">:: </span>UI/UX</div>
-      <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Web/Mobile Development</div>
-      <div class="list-group-item my-handle"><span class = "my-handle">:: </span>System Architecture/System Integration</div>
-      <div class="list-group-item my-handle"><span class = "my-handle">:: </span>AI</div>
-      <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Game Programming</div>
+
+  <br>
+
+  <div class = "col-md-6 col-lg-6 col-xs-12">
+    <h4>Sort your skills</h4>
+    <!-- THIS IS THE SKILLS SORT ORDER LIST HTML -->
+    <div id = "SkillsSortOrderList">
+      <div id="simpleSkillList" class="list-group">
+        <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Project Management/Tech Writing</div>
+        <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Programming Scripts</div>
+        <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Object Oriented Programming</div>
+        <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Database</div>
+        <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Algorithms</div>
+        <div class="list-group-item my-handle"><span class = "my-handle">:: </span>System Design/OS</div>
+        <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Business Analysis</div>
+        <div class="list-group-item my-handle"><span class = "my-handle">:: </span>UI/UX</div>
+        <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Web/Mobile Development</div>
+        <div class="list-group-item my-handle"><span class = "my-handle">:: </span>System Architecture/System Integration</div>
+        <div class="list-group-item my-handle"><span class = "my-handle">:: </span>AI</div>
+        <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Game Programming</div>
+      </div>
     </div>
-  </div>
-  <script>
-  // Simple list
-
-
-  Sortable.create(simpleSkillList, { 	handle: '.my-handle',
-  animation: 150 });
-  </script>
-</div>
-<div class = "col-md-6 col-lg-6 col-xs-12">
-  <h4>Sort your Work Habits</h4>
-  <!-- THIS IS THE CULTURE SORT ORDER LIST HTML -->
-  <div id = "CultureSortOrderList">
-    <div id="simpleCultureList" class="list-group">
-      <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Creative</div>
-      <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Logical/Analytical</div>
-      <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Problem Solver</div>
-      <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Good Listener</div>
-      <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Oral Communicator</div>
-      <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Written Communicator</div>
-      <div class="list-group-item my-handle"><span class = "my-handle">:: </span>People Skills</div>
-      <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Punctual</div>
-      <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Accurate</div>
-      <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Efficient</div>
-      <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Multi-Tasker</div>
-      <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Planner</div>
-      <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Researcher</div>
-      <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Team Leader</div>
-      <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Team Member</div>
-    </div>
-  </div>
-  <script>
+    <script>
     // Simple list
-    Sortable.create(simpleCultureList, {
-      handle: '.my-handle',
-      animation: 150
-    });
-  </script>
-</div>
 
-<%=
-  @skillarray = [@skillset.project_management, @skillset.scripting, @skillset.programming, @skillset.dbadmin, @skillset.ui_ux, @skillset.algorithms, @skillset.system_design, @skillset.web_dev, @skillset.mobile_dev, @skillset.sysarchitecture, @skillset.ai, @skillset.game_programming]
-  @skillarray
-%>
 
-<!-- t.integer  "project_management"
-t.integer  "scripting"
-t.integer  "programming"
-t.integer  "dbadmin"
-t.integer  "ui_ux"
-t.integer  "algorithms"
-t.integer  "system_design"
-t.integer  "analysis"
-t.integer  "web_dev"
-t.integer  "mobile_dev"
-t.integer  "sysarchitecture"
-t.integer  "ai"
-t.string   "game_programming" -->
+    Sortable.create(simpleSkillList, { 	handle: '.my-handle',
+    animation: 150 });
+    </script>
+  </div>
+  <div class = "col-md-6 col-lg-6 col-xs-12">
+    <h4>Sort your Work Habits</h4>
+    <!-- THIS IS THE CULTURE SORT ORDER LIST HTML -->
+    <div id = "CultureSortOrderList">
+      <div id="simpleCultureList" class="list-group">
+        <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Creative</div>
+        <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Logical/Analytical</div>
+        <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Problem Solver</div>
+        <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Good Listener</div>
+        <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Oral Communicator</div>
+        <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Written Communicator</div>
+        <div class="list-group-item my-handle"><span class = "my-handle">:: </span>People Skills</div>
+        <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Punctual</div>
+        <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Accurate</div>
+        <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Efficient</div>
+        <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Multi-Tasker</div>
+        <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Planner</div>
+        <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Researcher</div>
+        <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Team Leader</div>
+        <div class="list-group-item my-handle"><span class = "my-handle">:: </span>Team Member</div>
+      </div>
+    </div>
+    <script>
+      // Simple list
+      Sortable.create(simpleCultureList, {
+        handle: '.my-handle',
+        animation: 150
+      });
+    </script>
+  </div>
+
+<% end %>
+
+
+
+<% if @skillset == nil %>
+  <a href="/skillsets/new"><button class="btn btn-default">Update Skillset</button></a>
+<% end %>
+<% if @workset == nil %>
+  <a href="/work_cultures/new"><button class="btn btn-default">Update Work Culture</button></a>
+<% end %>
